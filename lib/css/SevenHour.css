@@ -1,0 +1,12 @@
+.sevenHour {
+  border: 2px solid #022636;
+}
+
+.card {
+  display: inline-block;
+  margin-left: 4%;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 18px;
+}
+
+

@@ -1,0 +1,10 @@
+.currentWeather {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Sunflower', sans-serif;
+  color: #103D50;
+}
+
+.currentDiv {
+  border: 2px solid #022636;
+}
