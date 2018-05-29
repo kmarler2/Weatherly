@@ -1,0 +1,31 @@
+.searchComponent {
+  background-color: #6E92A1;
+  height: 100vh;
+  width: 98vw;
+  color: #103D50;
+  font-family: 'Sunflower', sans-serif;
+  border: 2px solid #022636;
+}
+.title {
+  padding-top: 20%;
+  margin-left: 10%;
+  font-size: 35px;
+  color: #103D50;
+}
+
+.title-input {
+  margin-left: 33%;
+  padding-right: 10%;
+  font-size: 30px;
+  color: #103D50;
+  border: 0;
+  border-radius: 1.5%;
+}
+
+.title-btn {
+  font-size: 30px;
+  color: #103D50;
+  border: 0;
+  margin-left: 1%;
+  border-radius: 5%;
+}
