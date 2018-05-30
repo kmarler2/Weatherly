@@ -25,5 +25,11 @@ describe('App', () => {
 
     expect(actual).toEqual(expected);
   })
+
+  it('should have a getData function', () => {
+    const wrapper = shallow(<App /> )     
+    expect(wrapper.getData).toBeDefined();
+  })
+
 })
 
