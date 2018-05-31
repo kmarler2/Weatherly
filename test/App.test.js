@@ -18,8 +18,7 @@ describe('App', () => {
   it('should have default state', () => {
     const wrapper = shallow(<App /> ); 
     let expected = {
-      data: {},
-      searchTerms: ''
+      data: {}
     }
     let actual = wrapper.state();
 
