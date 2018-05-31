@@ -20,8 +20,7 @@ describe('App', () => {
     const wrapper = shallow(<App /> ); 
     let expected = {
       data: {},
-      searchTerms: '',
-      location: ''
+      searchTerms: ''
     }
     let actual = wrapper.state();
 
