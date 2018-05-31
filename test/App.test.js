@@ -2,8 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Search from '../lib/Search.js';
 import App from '../lib/App.js';
-import SevenHour from '../lib/SevenHour.js'
-import TenDay from '../lib/TenDay.js'
+import CardContainer from '../lib/CardContainer.js'
 import Card from '../lib/Card.js';
 
 describe('App', () => {
@@ -46,23 +45,13 @@ describe('Search', () => {
   })
 })
 
-describe('SevenHour',() => {
+describe('CardContainer',() => {
   it('should render Card components', () => {
     const pops = [{},{},{}]
-    const wrapper = shallow(<SevenHour hours={ pops } />);
+    const wrapper = shallow(<CardContainer hours={ pops } />);
 
     let actual = wrapper.find(Card).length;
     expect(actual).toBe(3);
-  })
-})
-
-describe('TenDay',() => {
-  it('should render Card components', () => {
-    const days = [{},{},{},{}];
-    const wrapper = shallow(<TenDay days={ days } />)
-
-    let actual = wrapper.find(Card).length;
-    expect(actual).toBe(4);
   })
 })
 
