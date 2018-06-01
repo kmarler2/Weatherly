@@ -4,12 +4,10 @@ import Search from '../lib/Search.js';
 import CurrentWeather from '../lib/CurrentWeather.js';
 import App from '../lib/App.js';
 import CardContainer from '../lib/CardContainer.js'
+import LocalStorage from './test_helpers/mockLocalStorage.js';
 
 
 describe('App', () => {
-  global.localStorage = {
-    getItem: () => 'tacos'
-  };
 
   let renderedApp;
 
@@ -39,8 +37,19 @@ describe('App', () => {
     })
 
     expect(renderedApp.find(Search).length).toEqual(1);
-    expect(renderedApp.find(CurrentWeather).length).toEqual(1)
+    expect(renderedApp.find(CurrentWeather).length).toEqual(1);
     expect(renderedApp.find(CardContainer).length).toEqual(1);
+  })
+
+  it('should have a storeLocation method that puts data in localStorage', () => {
+    global.localStorage = new LocalStorage();
+    localStorage.clear();
+    const app = renderedApp.instance();
+    
+    app.storeLocation('Alabama');
+    const actual = localStorage.getItem('location');
+
+    expect(actual).toEqual('Alabama');
   })
 })
 

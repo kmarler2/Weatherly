@@ -18,16 +18,15 @@ describe('Card', () => {
     expect(renderedCard.find('.card').length).toEqual(1);
   })
 
-  // it('should render a card with props passed', () => {
+  it('should render a card with props passed', () => {
 
-  //   const element =   
-  //   <div className="card">
-  //     <h3 className="card-hour">Hour: '4'</h3>
-  //     <h4 className="card-temp">Temp: '76'</h4>
-  //     <img src='duude!'/>
-  //   </div>
+    const element =   
+    <div className="card">
+      <h3 className="card-hour">Hour: 4</h3>
+      <h4 className="card-temp">Temp: 76</h4>
+      <img src='duude!'/>
+    </div>
 
-  //   expect(renderedCard.matchesElement(element)).toEqual(true);
-  // })
-
+    expect(renderedCard.text()).toEqual('Hour: 4Temp: 76');
+  })
 })

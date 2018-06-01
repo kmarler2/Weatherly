@@ -6,7 +6,7 @@ describe('Search', () => {
   let renderedSearch;
 
   beforeEach( ()=> {
-    renderedSearch = shallow(<Search />)
+    renderedSearch = shallow(<Search fetchData={() => 'burritos'}/>)
   })
 
   it('should exist', () => {
@@ -32,9 +32,23 @@ describe('Search', () => {
   it('should have a handleChange method that updates the its state', () => {
     const mockEvent = {target: {value: 'sweet!'}};
 
-    let search = renderedSearch.instance();
+    const search = renderedSearch.instance();
     search.handleChange(mockEvent);
 
     expect(search.state.value).toEqual('sweet!');
+  })
+
+  it('should listen for clicks on the button to invoke defineCityAndState', () => {
+    const mockEvent = {target: {value: 'sweet!'}};
+
+    renderedSearch.find('button').simulate('click', mockEvent);
+    expect(renderedSearch.state().welcome).toEqual(false);
+  })
+
+  it('should listed for changes on the input to invoke handleChange', () => {
+    const mockEvent = {target: {value: 'sweet!'}};
+
+    renderedSearch.find('input').simulate('change', mockEvent);
+    expect(renderedSearch.state().value).toEqual('sweet!');
   })
 })
