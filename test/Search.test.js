@@ -30,25 +30,45 @@ describe('Search', () => {
   })
 
   it('should have a handleChange method that updates the its state', () => {
-    const mockEvent = {target: {value: 'sweet!'}};
-
+    const mockFunction = () => 'beans';
+    const mockEvent = {target: {value: 'sweet!'},
+                      preventDefault: mockFunction };
     const search = renderedSearch.instance();
     search.handleChange(mockEvent);
 
     expect(search.state.value).toEqual('sweet!');
   })
 
-  it('should listen for clicks on the button to invoke defineCityAndState', () => {
-    const mockEvent = {target: {value: 'sweet!'}};
+  it('should listen for submits on the form to invoke defineCityAndState', () => {
+    const mockFunction = () => 'beans';
+    const mockEvent = {target: {value: 'sweet!'},
+                      preventDefault: mockFunction };
 
-    renderedSearch.find('button').simulate('click', mockEvent);
+    renderedSearch.find('form').simulate('submit', mockEvent);
     expect(renderedSearch.state().welcome).toEqual(false);
   })
 
-  it('should listed for changes on the input to invoke handleChange', () => {
-    const mockEvent = {target: {value: 'sweet!'}};
+  it('should listen for changes on the input to invoke handleChange', () => {
+    const mockFunction = () => 'beans';
+    const mockEvent = {target: {value: 'sweet!'},
+                      preventDefault: mockFunction };
 
     renderedSearch.find('input').simulate('change', mockEvent);
     expect(renderedSearch.state().value).toEqual('sweet!');
   })
+
+  it('should give suggestions', () => {
+    const mockFunction = () => 'beans';
+    const mockEvent = {target: {value: 'den'},
+                      preventDefault: mockFunction };
+    
+    renderedSearch.find('input').simulate('change', mockEvent);
+    console.log(renderedSearch.state().suggestions)
+    expect(renderedSearch.state().suggestions.length).toEqual(2);
+  })
 })
+
+
+
+
+
