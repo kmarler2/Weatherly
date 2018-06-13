@@ -1,12 +1,27 @@
-.cardContainer {
-  border: 2px solid #022636;
+.sevenHour {
+  font-size: 1.25em;
 }
-
 .card {
   display: inline-block;
-  margin-left: 4%;
-  font-family: 'Sunflower', sans-serif;
-  font-size: 18px;
+  background-color: #324C69;
+  padding-right: 3.4%;
+  padding-left: 3.4%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  color: #D5E2ED;
+  text-shadow: -1px 0 #041933, 0 1px #041933, 1px 0 #041933, 0 1px #041933;
+  margin-bottom: 50px;
 }
 
-
+.day {
+  display: inline-block;
+  background-color: #324C69;
+  font-size: 1.25em;
+  padding-right: 2.252%;
+  padding-left: 2.252%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  color: #D5E2ED;
+  text-shadow: -1px 0 #041933, 0 1px #041933, 1px 0 #041933, 0 1px #041933;
+  margin-bottom: 50px;
+}

@@ -1,10 +1,12 @@
-.currentWeather {
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Sunflower', sans-serif;
-  color: #103D50;
-}
-
 .currentDiv {
-  border: 2px solid #022636;
+  font-size: 1.5em;
+  text-align: center;
+  color: #D5E2ED;
+  text-shadow: -1px 0 #041933, 0 1px #041933, 1px 0 #041933, 0 -1px #041933;
+  margin-bottom: 50px;
+  background-color: #324C69;
+  width: 25%;
+  padding: 1%;
+  margin-left: 37.5%;
+  margin-top: 70px;
 }

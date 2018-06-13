@@ -1,1 +1,37 @@
-.greeting { padding-bottom: 20px; border-bottom: 1px solid #ccc; }
+body {
+  margin: 0;
+  padding: 0;
+}
+.entire {
+  background-image: url('CloudyDay.jpg');
+}
+
+.Welcome {
+  font-size: 4.5em;
+  color: #A4BACB;
+  margin-left: 28%;
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-top: 10%;
+  text-shadow: -2px 0 #041933, 0 2px #041933, 2px 0 #041933, 0 -2px #041933;
+}
+
+.title-input {
+  font-size: 1.75em;
+  width: 33%;
+  margin-left: 30%;
+  border: 2px solid #041933;
+  padding: 0.5%;
+}
+
+.title-input::placeholder {
+  color: #324C69;
+}
+
+.title-btn {
+  font-size: 1.75em;
+  background-color: #D5E2ED;
+  color: #324C69;
+  border: 2px solid #041933;
+  padding: 0.5%;
+}
